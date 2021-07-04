@@ -5,6 +5,7 @@
     <configuration>
         <name>Debug</name>
         <outputs>
+            <file>$PROJ_DIR$\asm.s</file>
             <file>$PROJ_DIR$\..\Laboratorio_01\asm.s</file>
         </outputs>
         <forcedrebuild>
