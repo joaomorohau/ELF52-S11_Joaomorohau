@@ -10,12 +10,7 @@
         
 __iar_program_start
         
-        ;; main program begins here
-main    MOV R0, #0x01           ; r0 := 0x01
-loop    ADD R0, R0, #0x03       ; r0 := r0 + 0x03
-        AND R0, R0, #0x0F       ; r0 := ro && 0x0f (bitwise and)
-        B       loop            ; go to loop
-        ;; main program ends here
+main    B       main
 
         ;; Forward declaration of sections.
         SECTION CSTACK:DATA:NOROOT(3)

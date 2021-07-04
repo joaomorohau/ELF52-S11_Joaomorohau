@@ -1,0 +1,238 @@
+###############################################################################
+#
+# IAR ELF Linker V9.10.2.313/W64 for ARM                  04/Jul/2021  15:57:56
+# Copyright 2007-2021 IAR Systems AB.
+#
+#    Output file  =
+#        D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\aapcs\Debug\Exe\aapcs.out
+#    Map file     =
+#        D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\aapcs\Debug\List\aapcs.map
+#    Command line =
+#        -f "D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\aapcs\Debug\Exe\aapcs.out.rsp"
+#        ("D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\aapcs\Debug\Obj\main.o"
+#        --no_out_extension -o "D:\jmoro\Desktop\Pessoal\1.
+#        Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\aapcs\Debug\Exe\aapcs.out" --map
+#        "D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\aapcs\Debug\List\aapcs.map" --config
+#        "D:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\CONFIG\generic_cortex.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x7'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block PROC_STACK with size = 0, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'ffff] {
+          rw, block CSTACK, block PROC_STACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address   Size  Object
+  -------            ----         -------   ----  ------
+"A0":                                       0x40
+  .intvec            ro code          0x0   0x40  vector_table_M.o [3]
+                                   - 0x40   0x40
+
+"P1":                                      0x3e0
+  .text              ro code         0x40  0x136  xprintftiny.o [2]
+  .text              ro code        0x176   0x2a  copy_init3.o [3]
+  .text              ro code        0x1a0   0x36  strlen.o [3]
+  .text              ro code        0x1d6    0x2  vectortrap_M.o [3]
+  .text              ro code        0x1d8   0x7c  iarttio.o [4]
+  .text              ro code        0x254    0x8  XShttio.o [2]
+  .text              ro code        0x25c   0x30  main.o [1]
+  .text              ro code        0x28c   0x28  printf.o [2]
+  .text              ro code        0x2b4   0x28  data_init.o [3]
+  .text              ro code        0x2dc   0x22  iarwrite.o [4]
+  .iar.init_table    const          0x300   0x14  - Linker created -
+  .text              ro code        0x314   0x20  putchar.o [2]
+  .text              ro code        0x334   0x10  write.o [4]
+  .text              ro code        0x344   0x1e  dwrite.o [4]
+  .text              ro code        0x362   0x20  iarwstd.o [4]
+  .text              ro code        0x384   0x1e  cmain.o [3]
+  .text              ro code        0x3a2    0x4  low_level_init.o [2]
+  .text              ro code        0x3a6    0x4  exit.o [2]
+  .text              ro code        0x3ac    0xa  cexit.o [3]
+  .text              ro code        0x3b8   0x14  exit.o [4]
+  .text              ro code        0x3cc   0x1c  cstartup_M.o [3]
+  .rodata            const          0x3e8   0x18  main.o [1]
+  .text              ro code        0x400   0x16  xprout.o [2]
+  Initializer bytes  const          0x418    0x8  <for P2-1>
+  .rodata            const          0x420    0x0  copy_init3.o [3]
+                                  - 0x420  0x3e0
+
+"P2", part 1 of 2:                           0x8
+  P2-1                        0x2000'0000    0x8  <Init block>
+    .data            inited   0x2000'0000    0x8  XShttio.o [2]
+                            - 0x2000'0008    0x8
+
+"P2", part 2 of 2:                         0x400
+  CSTACK                      0x2000'0008  0x400  <Block>
+    CSTACK           uninit   0x2000'0008  0x400  <Block tail>
+                            - 0x2000'0408  0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x420     0x7'ffff  0x7'fbe0
+  0x2000'0408  0x2000'ffff    0xfbf8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x8:
+                0x418   0x8
+    1 destination range, total size 0x8:
+          0x2000'0000   0x8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas Microcontrolados\GitHub\Projects\aapcs\Debug\Obj: [1]
+    main.o                 48       24
+    -------------------------------------------
+    Total:                 48       24
+
+dl7M_tln.a: [2]
+    XShttio.o               8        8        8
+    exit.o                  4
+    low_level_init.o        4
+    printf.o               40
+    putchar.o              32
+    xprintftiny.o         310
+    xprout.o               22
+    -------------------------------------------
+    Total:                420        8        8
+
+rt7M_tl.a: [3]
+    cexit.o                10
+    cmain.o                30
+    copy_init3.o           42
+    cstartup_M.o           28
+    data_init.o            40
+    strlen.o               54
+    vector_table_M.o       64
+    vectortrap_M.o          2
+    -------------------------------------------
+    Total:                270
+
+shb_l.a: [4]
+    dwrite.o               30
+    exit.o                 20
+    iarttio.o             124
+    iarwrite.o             34
+    iarwstd.o              32
+    write.o                16
+    -------------------------------------------
+    Total:                256
+
+    Gaps                    6        2
+    Linker created                  22    1'024
+-----------------------------------------------
+    Grand Total:        1'000       56    1'032
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0x300          --   Gb  - Linker created -
+.iar.init_table$$Limit        0x314          --   Gb  - Linker created -
+?main                         0x385         Code  Gb  cmain.o [3]
+BusFault_Handler              0x1d7         Code  Wk  vectortrap_M.o [3]
+CSTACK$$Base            0x2000'0008          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0408          --   Gb  - Linker created -
+DebugMon_Handler              0x1d7         Code  Wk  vectortrap_M.o [3]
+HardFault_Handler             0x1d7         Code  Wk  vectortrap_M.o [3]
+MemManage_Handler             0x1d7         Code  Wk  vectortrap_M.o [3]
+NMI_Handler                   0x1d7         Code  Wk  vectortrap_M.o [3]
+PendSV_Handler                0x1d7         Code  Wk  vectortrap_M.o [3]
+Region$$Table$$Base           0x300          --   Gb  - Linker created -
+Region$$Table$$Limit          0x314          --   Gb  - Linker created -
+SVC_Handler                   0x1d7         Code  Wk  vectortrap_M.o [3]
+SysTick_Handler               0x1d7         Code  Wk  vectortrap_M.o [3]
+UsageFault_Handler            0x1d7         Code  Wk  vectortrap_M.o [3]
+_PrintfTiny                    0x59  0x11e  Code  Gb  xprintftiny.o [2]
+_Prout                        0x401   0x16  Code  Gb  xprout.o [2]
+__cmain                       0x385         Code  Gb  cmain.o [3]
+__dwrite                      0x345   0x1e  Code  Gb  dwrite.o [4]
+__exit                        0x3b9   0x14  Code  Gb  exit.o [4]
+__iar_close_ttio              0x1d9   0x2c  Code  Gb  iarttio.o [4]
+__iar_copy_init3              0x177   0x2a  Code  Gb  copy_init3.o [3]
+__iar_data_init3              0x2b5   0x28  Code  Gb  data_init.o [3]
+__iar_get_ttio                0x205   0x4c  Code  Gb  iarttio.o [4]
+__iar_lookup_ttioh            0x255    0x8  Code  Gb  XShttio.o [2]
+__iar_program_start           0x3cd         Code  Gb  cstartup_M.o [3]
+__iar_sh_stdout               0x363   0x20  Code  Gb  iarwstd.o [4]
+__iar_sh_write                0x2dd   0x22  Code  Gb  iarwrite.o [4]
+__iar_ttio_handles      0x2000'0000    0x8  Data  Lc  XShttio.o [2]
+__low_level_init              0x3a3    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0         Data  Gb  vector_table_M.o [3]
+__write                       0x335   0x10  Code  Gb  write.o [4]
+_call_main                    0x391         Code  Gb  cmain.o [3]
+_exit                         0x3ad         Code  Gb  cexit.o [3]
+exit                          0x3a7    0x4  Code  Gb  exit.o [2]
+main                          0x25d   0x30  Code  Gb  main.o [1]
+out                            0x41   0x18  Code  Lc  xprintftiny.o [2]
+printf                        0x28d   0x28  Code  Gb  printf.o [2]
+putchar                       0x315   0x20  Code  Gb  putchar.o [2]
+strlen                        0x1a1         Code  Gb  strlen.o [3]
+
+
+[1] = D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas Microcontrolados\GitHub\Projects\aapcs\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+  1'000 bytes of readonly  code memory
+     56 bytes of readonly  data memory
+  1'032 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

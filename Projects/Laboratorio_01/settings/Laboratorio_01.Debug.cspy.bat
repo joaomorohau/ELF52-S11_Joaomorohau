@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"D:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\jmoro\Documents\GitHub\ELF52-S11_Joaomorohau\Projects\Laboratorio_01\settings\Laboratorio_01.Debug.general.xcl" --backend -f "D:\jmoro\Documents\GitHub\ELF52-S11_Joaomorohau\Projects\Laboratorio_01\settings\Laboratorio_01.Debug.driver.xcl" 
+"D:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas Microcontrolados\GitHub\Projects\Laboratorio_01\settings\Laboratorio_01.Debug.general.xcl" --backend -f "D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas Microcontrolados\GitHub\Projects\Laboratorio_01\settings\Laboratorio_01.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\jmoro\Documents\GitHub\ELF52-S11_Joaomorohau\Projects\Laboratorio_01\settings\Laboratorio_01.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\jmoro\Documents\GitHub\ELF52-S11_Joaomorohau\Projects\Laboratorio_01\settings\Laboratorio_01.Debug.driver.xcl" 
+"D:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas Microcontrolados\GitHub\Projects\Laboratorio_01\settings\Laboratorio_01.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas Microcontrolados\GitHub\Projects\Laboratorio_01\settings\Laboratorio_01.Debug.driver.xcl" 
 
 @echo off 
 :end

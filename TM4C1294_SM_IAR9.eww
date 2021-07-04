@@ -19,6 +19,9 @@
         <path>$WS_DIR$\Projects\gpio_int\gpio_int.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\Projects\Laboratorio_01\Laboratorio_01.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\Projects\load_store\load_store.ewp</path>
     </project>
     <project>
