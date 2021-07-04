@@ -1,9 +1,0 @@
-# ninja log v5
-1	685	6462814854836271	D:/jmoro/Documents/GitHub/ELF52-S11_Joaomorohau/Projects/asm_example/Debug/Obj/asm.o	a2231262e3ce532d
-692	1751	6462814865447884	D:/jmoro/Documents/GitHub/ELF52-S11_Joaomorohau/Projects/asm_example/Debug/Exe/asm_example.out	e7a499534d14b7a3
-2	57	6462817452730151	D:/jmoro/Documents/GitHub/ELF52-S11_Joaomorohau/Projects/asm_example/Debug/Obj/asm.o	c05a7698e9cfb414
-2	57	6462817452730151	D:/jmoro/Documents/GitHub/ELF52-S11_Joaomorohau/Projects/asm_example/Debug/List/asm.lst	c05a7698e9cfb414
-65	278	6462817454939420	D:/jmoro/Documents/GitHub/ELF52-S11_Joaomorohau/Projects/asm_example/Debug/Exe/asm_example.out	3c476ae0257b0223
-65	278	6462817454939420	D:/jmoro/Documents/GitHub/ELF52-S11_Joaomorohau/Projects/asm_example/Debug/List/asm_example.map	3c476ae0257b0223
-1	44	6462817618740877	D:/jmoro/Documents/GitHub/ELF52-S11_Joaomorohau/Projects/asm_example/Debug/Obj/asm.o	a2231262e3ce532d
-52	212	6462817620331999	D:/jmoro/Documents/GitHub/ELF52-S11_Joaomorohau/Projects/asm_example/Debug/Exe/asm_example.out	e7a499534d14b7a3
