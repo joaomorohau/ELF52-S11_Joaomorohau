@@ -7,19 +7,17 @@
         <outputs>
             <file>$PROJ_DIR$\Debug\Exe\Laboratorio_01.out</file>
             <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
-            <file>$PROJ_DIR$\..\asm_example\src\asm.s</file>
             <file>$PROJ_DIR$\asm.s</file>
             <file>$PROJ_DIR$\Debug\Obj\asm.o.rsp</file>
-            <file>$TOOLKIT_DIR$\config\generic_cortex.icf</file>
             <file>$PROJ_DIR$\Debug\List\Laboratorio_01.map</file>
-            <file>$PROJ_DIR$\..\0. Testes\asm.s</file>
+            <file>$TOOLKIT_DIR$\config\generic_cortex.icf</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 0 6</file>
+                    <file> 4 0</file>
                 </tool>
             </outputs>
         </file>
@@ -28,7 +26,7 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 6</file>
+                    <file> 4</file>
                 </tool>
             </outputs>
             <inputs>
@@ -49,7 +47,7 @@
             <inputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 4</file>
+                    <file> 3</file>
                 </tool>
             </inputs>
         </file>

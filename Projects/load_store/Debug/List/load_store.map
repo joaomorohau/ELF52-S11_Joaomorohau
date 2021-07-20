@@ -1,0 +1,119 @@
+###############################################################################
+#
+# IAR ELF Linker V9.10.2.313/W64 for ARM                  11/Jul/2021  15:34:38
+# Copyright 2007-2021 IAR Systems AB.
+#
+#    Output file  =
+#        D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\load_store\Debug\Exe\load_store.out
+#    Map file     =
+#        D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\load_store\Debug\List\load_store.map
+#    Command line =
+#        -f "D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\load_store\Debug\Exe\load_store.out.rsp"
+#        ("D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\load_store\Debug\Obj\load_store.o"
+#        --no_out_extension -o "D:\jmoro\Desktop\Pessoal\1.
+#        Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\load_store\Debug\Exe\load_store.out"
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map "D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\load_store\Debug\List\load_store.map"
+#        --config "D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\load_store\src\my_cortex.icf"
+#        --semihosting --no_library_search --entry __iar_program_start --vfe
+#        --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x7'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block PROC_STACK with size = 0, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'ffff] {
+          rw, block CSTACK, block PROC_STACK, block HEAP };
+do not initialize { rw };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind         Address   Size  Object
+  -------   ----         -------   ----  ------
+"A0":                              0x40
+  .intvec   ro code          0x0   0x40  load_store.o [1]
+                          - 0x40   0x40
+
+"P1":                              0x88
+  .rodata   const           0x40   0x62  load_store.o [1]
+  .text     ro code         0xa2    0x2  load_store.o [1]
+  .text     ro code         0xa4   0x24  load_store.o [1]
+                          - 0xc8   0x88
+
+Absolute sections:                 0x62
+  .bss      uninit   0x2000'0000   0x62  load_store.o [1]
+                   - 0x2000'0062   0x62
+
+"P2":                             0x400
+  CSTACK             0x2000'0068  0x400  <Block>
+    CSTACK  uninit   0x2000'0068  0x400  <Block tail>
+                   - 0x2000'0468  0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+         0xc8     0x7'ffff  0x7'ff38
+  0x2000'0062  0x2000'0067       0x6
+  0x2000'0468  0x2000'ffff    0xfb98
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module          ro code  ro data  rw data  rw data
+                                                (abs)
+    ------          -------  -------  -------  -------
+command line/config:
+    --------------------------------------------------
+    Total:
+
+D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas Microcontrolados\GitHub\Projects\load_store\Debug\Obj: [1]
+    load_store.o        102       98                98
+    --------------------------------------------------
+    Total:              102       98                98
+
+    Linker created                      1'024
+------------------------------------------------------
+    Grand Total:        102       98    1'024       98
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address  Size  Type      Object
+-----                    -------  ----  ----      ------
+CSTACK$$Base         0x2000'0068         --   Gb  - Linker created -
+CSTACK$$Limit        0x2000'0468         --   Gb  - Linker created -
+__iar_program_start         0xa5        Code  Gb  load_store.o [1]
+__vector_table               0x0        Data  Gb  load_store.o [1]
+
+
+[1] = D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas Microcontrolados\GitHub\Projects\load_store\Debug\Obj
+
+    102 bytes of readonly  code memory
+     98 bytes of readonly  data memory
+  1'024 bytes of readwrite data memory (+ 98 absolute)
+
+Errors: none
+Warnings: none

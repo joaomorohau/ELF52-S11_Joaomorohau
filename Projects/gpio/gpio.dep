@@ -4,7 +4,53 @@
     <fileChecksum>943493627</fileChecksum>
     <configuration>
         <name>Debug</name>
-        <outputs />
+        <outputs>
+            <file>$PROJ_DIR$\Debug\Obj\gpio.o.rsp</file>
+            <file>$PROJ_DIR$\src\gpio.s</file>
+            <file>$PROJ_DIR$\Debug\Obj\gpio.o</file>
+            <file>$PROJ_DIR$\Debug\List\gpio.map</file>
+            <file>$PROJ_DIR$\Debug\Exe\gpio.out</file>
+            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C1294NC.icf</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 4 3</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\gpio.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 2</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\gpio.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 3</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 5 2</file>
+                </tool>
+            </inputs>
+        </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
             <tool>ILINK</tool>

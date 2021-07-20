@@ -10,6 +10,12 @@
         <path>$WS_DIR$\Projects\exceptions_sim\exceptions_sim.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\Projects\Exerc_10\Exerc_10.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\Projects\Exerc_11\Exerc_11.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\Projects\gpio\gpio.ewp</path>
     </project>
     <project>

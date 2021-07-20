@@ -4,10 +4,7 @@
     <fileChecksum>2086344722</fileChecksum>
     <configuration>
         <name>Debug</name>
-        <outputs>
-            <file>$PROJ_DIR$\src\cstartup_M.c</file>
-            <file>$PROJ_DIR$\src\exceptions_sim.c</file>
-        </outputs>
+        <outputs />
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
             <tool>ILINK</tool>

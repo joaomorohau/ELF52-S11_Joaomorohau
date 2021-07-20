@@ -4,10 +4,7 @@
     <fileChecksum>909609562</fileChecksum>
     <configuration>
         <name>Debug</name>
-        <outputs>
-            <file>$PROJ_DIR$\src\startup_TM4C1294.s</file>
-            <file>$PROJ_DIR$\src\uart.s</file>
-        </outputs>
+        <outputs />
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
             <tool>ILINK</tool>

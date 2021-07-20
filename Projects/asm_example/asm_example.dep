@@ -4,10 +4,7 @@
     <fileChecksum>2170240479</fileChecksum>
     <configuration>
         <name>Debug</name>
-        <outputs>
-            <file>$PROJ_DIR$\src\asm.s</file>
-            <file>$PROJ_DIR$\..\0. Testes\src\asm.s</file>
-        </outputs>
+        <outputs />
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
             <tool>ILINK</tool>

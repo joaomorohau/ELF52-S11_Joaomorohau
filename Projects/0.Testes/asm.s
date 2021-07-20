@@ -10,7 +10,19 @@
         
 __iar_program_start
         
-main    B       main
+main    MOV R0, #0x4567
+        MOVT R0, #0x0123
+        MVN R1, R0
+        MOV R2, #1
+        MOV R3, #2
+        
+        PUSH {R0, R1, R2, R3}
+        LDRH R4, [SP]
+        LDRH R5, [SP, R2, LSL #2]
+        LDRH R6, [SP, R3, LSL #2]
+        POP {R0, R1, R2, R3}
+        
+        B main
 
         ;; Forward declaration of sections.
         SECTION CSTACK:DATA:NOROOT(3)
