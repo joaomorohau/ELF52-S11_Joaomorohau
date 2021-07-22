@@ -1,0 +1,109 @@
+###############################################################################
+#
+# IAR ELF Linker V9.10.2.313/W64 for ARM                  22/Jul/2021  20:14:33
+# Copyright 2007-2021 IAR Systems AB.
+#
+#    Output file  =
+#        D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\gpio2\Debug\Exe\gpio2.out
+#    Map file     =
+#        D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\gpio2\Debug\List\gpio2.map
+#    Command line =
+#        -f "D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\gpio2\Debug\Exe\gpio2.out.rsp"
+#        ("D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\gpio2\Debug\Obj\gpio2.o"
+#        --no_out_extension -o "D:\jmoro\Desktop\Pessoal\1.
+#        Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\gpio2\Debug\Exe\gpio2.out" --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        "D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas
+#        Microcontrolados\GitHub\Projects\gpio2\Debug\List\gpio2.map" --config
+#        "D:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\config\linker\TexasInstruments\TM4C1294NC.icf" --semihosting
+#        --no_library_search --entry __iar_program_start --vfe --text_out
+#        locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0xf'ffff] { ro };
+define block CSTACK with size = 32K, alignment = 8 { };
+define block HEAP with size = 64K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2003'ffff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind         Address    Size  Object
+  -------   ----         -------    ----  ------
+"A0":                               0x40
+  .intvec   ro code          0x0    0x40  gpio2.o [1]
+                          - 0x40    0x40
+
+"P1":                               0xde
+  .text     ro code         0x40    0xdc  gpio2.o [1]
+  .text     ro code        0x11c     0x2  gpio2.o [1]
+                         - 0x11e    0xde
+
+"P2":                             0x8000
+  CSTACK             0x2000'0000  0x8000  <Block>
+    CSTACK  uninit   0x2000'0000  0x8000  <Block tail>
+                   - 0x2000'8000  0x8000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x11e     0xf'ffff  0xf'fee2
+  0x2000'8000  0x2003'ffff  0x3'8000
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module          ro code  rw data
+    ------          -------  -------
+command line/config:
+    --------------------------------
+    Total:
+
+D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas Microcontrolados\GitHub\Projects\gpio2\Debug\Obj: [1]
+    gpio2.o             286
+    --------------------------------
+    Total:              286
+
+    Linker created            32'768
+------------------------------------
+    Grand Total:        286   32'768
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address  Size  Type      Object
+-----                    -------  ----  ----      ------
+CSTACK$$Base         0x2000'0000         --   Gb  - Linker created -
+CSTACK$$Limit        0x2000'8000         --   Gb  - Linker created -
+__iar_program_start         0x41        Code  Gb  gpio2.o [1]
+__vector_table               0x0        Data  Gb  gpio2.o [1]
+
+
+[1] = D:\jmoro\Desktop\Pessoal\1. Faculdade\ADNPs\2021.1\Sistemas Microcontrolados\GitHub\Projects\gpio2\Debug\Obj
+
+     286 bytes of readonly  code memory
+  32'768 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

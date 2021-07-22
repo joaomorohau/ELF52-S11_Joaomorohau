@@ -4,7 +4,54 @@
     <fileChecksum>3077557219</fileChecksum>
     <configuration>
         <name>Debug</name>
-        <outputs />
+        <outputs>
+            <file>$PROJ_DIR$\src\gpio2.s</file>
+            <file>$PROJ_DIR$\Debug\Obj\gpio2.o.rsp</file>
+            <file>$PROJ_DIR$\Debug\Obj\gpio2.o</file>
+            <file>$PROJ_DIR$\Debug\List\gpio2.map</file>
+            <file>$PROJ_DIR$\Debug\Exe\gpio2.out</file>
+            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C1294NC.icf</file>
+            <file>$PROJ_DIR$\..\Exerc_17\asm.s</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\src\gpio2.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 2</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 1</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 4 3</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\gpio2.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 3</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 5 2</file>
+                </tool>
+            </inputs>
+        </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
             <tool>ILINK</tool>

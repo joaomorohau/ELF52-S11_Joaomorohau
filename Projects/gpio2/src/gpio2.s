@@ -12,12 +12,12 @@
 SYSCTL_RCGCGPIO_R       EQU     0x400FE608
 SYSCTL_PRGPIO_R		EQU     0x400FEA08
 PORTF_BIT               EQU     0000000000100000b ; bit  5 = Port F
-PORTJ_BIT               EQU     0000000100000000b ; bit  8 = Port J
+//PORTJ_BIT               EQU     0000000100000000b ; bit  8 = Port J
 PORTN_BIT               EQU     0001000000000000b ; bit 12 = Port N
 
 ; GPIO Port definitions
 GPIO_PORTF_BASE    	EQU     0x4005D000
-GPIO_PORTJ_BASE    	EQU     0x40060000
+//GPIO_PORTJ_BASE    	EQU     0x40060000
 GPIO_PORTN_BASE    	EQU     0x40064000
 GPIO_DIR                EQU     0x0400
 GPIO_PUR                EQU     0x0510
@@ -28,24 +28,70 @@ GPIO_DEN                EQU     0x051C
 
 __iar_program_start
         
-main:   MOV R0, #(PORTN_BIT)
+main    MOV R0, #(PORTN_BIT)
 	BL GPIO_enable ; habilita clock ao port N
         
 	LDR R0, =GPIO_PORTN_BASE
         MOV R1, #00000011b ; bits 0 e 1 como saída (LEDs D1 e D2)
         BL GPIO_digital_output
+        
+        MOV R0, #(PORTF_BIT)
+	BL GPIO_enable ; habilita clock ao port N
+        
+	LDR R0, =GPIO_PORTF_BASE
+        MOV R1, #00000011b ; bits 0 e 1 como saída (LEDs D3 e D4)
+        BL GPIO_digital_output
+        
 
  	LDR R0, =GPIO_PORTN_BASE
+        LDR R3, =GPIO_PORTF_BASE
+        
         MOV R1, #000000011b ; máscara dos LEDs D1 e D2
-        MOV R2, #000000001b ; padrão de acionamento
-loop:   BL GPIO_write; aciona LEDs D1 e D2
+        MOV R2, #000000000b ; padrão de acionamento
+
+        MOV R4, #000000011b ; máscara dos LEDs D3 e D4
+        MOV R5, #000000000b ; padrão de acionamento
+
+//        MOV R6, #4
+//        MOV R7, #4
+
+loop    BL GPIO_write; aciona LEDs D1 e D2
 
         PUSH {R0}
-        MOVT R0, #0x000F
+        MOVT R0, #0x002F
         BL SW_delay ; atraso (determina frequência de acionamento)
         POP {R0}
+         
+//        CBZ R6, last
+//        SUB R6, R6, #1
+//        ADD R2, R2, #1b
+//        B loop  
+//        
+//last   
+//        CBZ R7, fim
+//        MOV R6, #4
+//        SUB R7, R7, #1
+//        ADD R5, R5, #1b
+//        B loop
+//        
+//fim     
+//        MOV R6, #4
+//        MOV R7, #4
+//        MOV R2, #000000000b
+//        MOV R5, #000000000b
+//        B loop
+//        
+//        
+//        (condicional R2 e R5 <= #11b)
+        CMP R2, #11b
+        ITEE NE
+          ADDNE R2, R2, #1b
+          ADDEQ R5, #1b
+          MOVEQ R2, #0b
         
-        EOR R2, R2, #11b ; inverte o padrão de acionamento
+        CMP R5, #100b
+        IT EQ
+          MOVEQ R5, #0b
         B loop
 
 
@@ -86,6 +132,7 @@ GPIO_digital_output:
 ; R2 = bits a serem escritos
 GPIO_write:
         STR R2, [R0, R1, LSL #2] ; escreve bits com máscara de acesso
+        STR R5, [R3, R4, LSL #2]
         BX LR
 
 ; GPIO_digital_input: habilita entradas digitais no port de GPIO desejado

@@ -5,20 +5,19 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\asm.s</file>
-            <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
             <file>$PROJ_DIR$\Debug\Obj\asm.o.rsp</file>
-            <file>$TOOLKIT_DIR$\config\generic_cortex.icf</file>
-            <file>$PROJ_DIR$\Debug\Exe\Exerc_10.out</file>
             <file>$PROJ_DIR$\Debug\List\Exerc_10.map</file>
-            <file>$PROJ_DIR$\..\gpio\src\gpio.s</file>
+            <file>$TOOLKIT_DIR$\config\generic_cortex.icf</file>
+            <file>$PROJ_DIR$\asm.s</file>
+            <file>$PROJ_DIR$\Debug\Exe\Exerc_10.out</file>
+            <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 4 5</file>
+                    <file> 4 1</file>
                 </tool>
             </outputs>
         </file>
@@ -27,13 +26,13 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 1</file>
+                    <file> 5</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 2</file>
+                    <file> 0</file>
                 </tool>
             </inputs>
         </file>
@@ -42,13 +41,13 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 5</file>
+                    <file> 1</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 3 1</file>
+                    <file> 2 5</file>
                 </tool>
             </inputs>
         </file>

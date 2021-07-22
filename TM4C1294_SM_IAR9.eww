@@ -16,6 +16,15 @@
         <path>$WS_DIR$\Projects\Exerc_11\Exerc_11.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\Projects\Exerc_16\Exerc_16.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\Projects\Exerc_17\Exerc_17.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\Projects\Exerc_18\Exerc_18.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\Projects\gpio\gpio.ewp</path>
     </project>
     <project>

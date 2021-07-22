@@ -7,23 +7,32 @@
         <outputs>
             <file>$PROJ_DIR$\Debug\Exe\Testes.out</file>
             <file>$PROJ_DIR$\Debug\Obj\asm.o.rsp</file>
-            <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
-            <file>$PROJ_DIR$\Debug\List\Testes.map</file>
             <file>$PROJ_DIR$\asm.s</file>
             <file>$TOOLKIT_DIR$\config\generic_cortex.icf</file>
+            <file>$PROJ_DIR$\Debug\List\Testes.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
         </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 4 0</file>
+                </tool>
+            </outputs>
+        </file>
         <file>
             <name>$PROJ_DIR$\Debug\Exe\Testes.out</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 3</file>
+                    <file> 4</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 5 2</file>
+                    <file> 3 5</file>
                 </tool>
             </inputs>
         </file>
@@ -32,7 +41,7 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 2</file>
+                    <file> 5</file>
                 </tool>
             </outputs>
             <inputs>
@@ -41,15 +50,6 @@
                     <file> 1</file>
                 </tool>
             </inputs>
-        </file>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 3 0</file>
-                </tool>
-            </outputs>
         </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
