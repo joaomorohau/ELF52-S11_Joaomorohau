@@ -1,0 +1,22 @@
+# ninja log v5
+32	191	6490441073565495	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Obj/startup_TM4C1294.o	6dfc2f3d98375ffb
+1	205	6490441073784910	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Obj/gpio_int.o	84608f9c70a9650
+242	462	6490441076407888	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Exe/gpio_int.out	e05fb0e1f7e51c10
+50	130	6490442287448807	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Obj/gpio_int.o	84608f9c70a9650
+137	289	6490442288914885	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Exe/gpio_int.out	e05fb0e1f7e51c10
+2	59	6490444374202392	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Obj/gpio_int.o	84608f9c70a9650
+66	221	6490444375735521	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Exe/gpio_int.out	e05fb0e1f7e51c10
+2	54	6490451848871520	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Obj/gpio_int.o	84608f9c70a9650
+65	206	6490451850322737	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Exe/gpio_int.out	e05fb0e1f7e51c10
+3	93	6490454270676749	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Obj/gpio_int.o	84608f9c70a9650
+107	254	6490454272164183	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Exe/gpio_int.out	e05fb0e1f7e51c10
+2	52	6490463783981513	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Obj/gpio_int.o	84608f9c70a9650
+60	200	6490463785367796	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Exe/gpio_int.out	e05fb0e1f7e51c10
+2	66	6490467005459483	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Obj/gpio_int.o	84608f9c70a9650
+81	236	6490467007055842	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Exe/gpio_int.out	e05fb0e1f7e51c10
+2	59	6490468699474008	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Obj/gpio_int.o	84608f9c70a9650
+68	199	6490468700800469	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Exe/gpio_int.out	e05fb0e1f7e51c10
+2	56	6490469430638869	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Obj/gpio_int.o	84608f9c70a9650
+64	196	6490469431946000	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Exe/gpio_int.out	e05fb0e1f7e51c10
+2	40	6490469925324778	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Obj/gpio_int.o	84608f9c70a9650
+50	170	6490469926521578	D:/jmoro/Desktop/Pessoal/1. Faculdade/ADNPs/2021.1/Sistemas Microcontrolados/GitHub/Projects/gpio_int/Debug/Exe/gpio_int.out	e05fb0e1f7e51c10

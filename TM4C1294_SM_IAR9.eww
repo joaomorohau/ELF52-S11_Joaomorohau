@@ -25,6 +25,9 @@
         <path>$WS_DIR$\Projects\Exerc_18\Exerc_18.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\Projects\Exerc_20\Exerc_20.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\Projects\gpio\gpio.ewp</path>
     </project>
     <project>

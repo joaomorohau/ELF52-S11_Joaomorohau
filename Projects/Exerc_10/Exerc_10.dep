@@ -6,11 +6,11 @@
         <name>Debug</name>
         <outputs>
             <file>$PROJ_DIR$\Debug\Obj\asm.o.rsp</file>
+            <file>$PROJ_DIR$\Debug\Exe\Exerc_10.out</file>
+            <file>$PROJ_DIR$\asm.s</file>
+            <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
             <file>$PROJ_DIR$\Debug\List\Exerc_10.map</file>
             <file>$TOOLKIT_DIR$\config\generic_cortex.icf</file>
-            <file>$PROJ_DIR$\asm.s</file>
-            <file>$PROJ_DIR$\Debug\Exe\Exerc_10.out</file>
-            <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
@@ -22,32 +22,32 @@
             </outputs>
         </file>
         <file>
+            <name>$PROJ_DIR$\Debug\Exe\Exerc_10.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 4</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 5 3</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
             <name>$PROJ_DIR$\asm.s</name>
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 5</file>
+                    <file> 3</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>AARM</name>
                     <file> 0</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Debug\Exe\Exerc_10.out</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 1</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 2 5</file>
                 </tool>
             </inputs>
         </file>
