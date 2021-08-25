@@ -5,21 +5,27 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\Debug\Exe\load_store.out</file>
-            <file>$PROJ_DIR$\Debug\Obj\load_store.o</file>
-            <file>$PROJ_DIR$\src\my_cortex.icf</file>
-            <file>$PROJ_DIR$\Debug\Obj\load_store.o.rsp</file>
             <file>$PROJ_DIR$\src\load_store.s</file>
+            <file>$PROJ_DIR$\Debug\Exe\load_store.out</file>
+            <file>$PROJ_DIR$\Debug\Obj\load_store.o.rsp</file>
+            <file>$PROJ_DIR$\src\my_cortex.icf</file>
+            <file>$PROJ_DIR$\Debug\Obj\load_store.o</file>
             <file>$PROJ_DIR$\Debug\List\load_store.map</file>
         </outputs>
         <file>
-            <name>[ROOT_NODE]</name>
+            <name>$PROJ_DIR$\src\load_store.s</name>
             <outputs>
                 <tool>
-                    <name>ILINK</name>
-                    <file> 5 0</file>
+                    <name>AARM</name>
+                    <file> 4</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 2</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\Debug\Exe\load_store.out</name>
@@ -32,24 +38,18 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 1 2</file>
+                    <file> 4 3</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\src\load_store.s</name>
+            <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
-                    <name>AARM</name>
-                    <file> 1</file>
+                    <name>ILINK</name>
+                    <file> 5 1</file>
                 </tool>
             </outputs>
-            <inputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 3</file>
-                </tool>
-            </inputs>
         </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>

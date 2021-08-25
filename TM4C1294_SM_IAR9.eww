@@ -7,6 +7,9 @@
         <path>$WS_DIR$\Projects\asm_example\asm_example.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\..\..\..\..\..\..\calculadora\calculadora.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\Projects\exceptions_sim\exceptions_sim.ewp</path>
     </project>
     <project>

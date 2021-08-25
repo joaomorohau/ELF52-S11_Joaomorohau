@@ -6,21 +6,12 @@
         <name>Debug</name>
         <outputs>
             <file>$PROJ_DIR$\Debug\Obj\gpio.o.rsp</file>
+            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C1294NC.icf</file>
             <file>$PROJ_DIR$\Debug\Obj\gpio.o</file>
             <file>$PROJ_DIR$\Debug\Exe\gpio.out</file>
-            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C1294NC.icf</file>
             <file>$PROJ_DIR$\src\gpio.s</file>
             <file>$PROJ_DIR$\Debug\List\gpio.map</file>
         </outputs>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 5 2</file>
-                </tool>
-            </outputs>
-        </file>
         <file>
             <name>$PROJ_DIR$\Debug\Exe\gpio.out</name>
             <outputs>
@@ -32,7 +23,7 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 3 1</file>
+                    <file> 1 2</file>
                 </tool>
             </inputs>
         </file>
@@ -41,7 +32,7 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 1</file>
+                    <file> 2</file>
                 </tool>
             </outputs>
             <inputs>
@@ -50,6 +41,15 @@
                     <file> 0</file>
                 </tool>
             </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 5 3</file>
+                </tool>
+            </outputs>
         </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
