@@ -5,25 +5,25 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\src\load_store.s</file>
-            <file>$PROJ_DIR$\Debug\Exe\load_store.out</file>
-            <file>$PROJ_DIR$\Debug\Obj\load_store.o.rsp</file>
             <file>$PROJ_DIR$\src\my_cortex.icf</file>
-            <file>$PROJ_DIR$\Debug\Obj\load_store.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\load_store.o.rsp</file>
+            <file>$PROJ_DIR$\src\load_store.s</file>
             <file>$PROJ_DIR$\Debug\List\load_store.map</file>
+            <file>$PROJ_DIR$\Debug\Exe\load_store.out</file>
+            <file>$PROJ_DIR$\Debug\Obj\load_store.o</file>
         </outputs>
         <file>
             <name>$PROJ_DIR$\src\load_store.s</name>
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 4</file>
+                    <file> 5</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 2</file>
+                    <file> 1</file>
                 </tool>
             </inputs>
         </file>
@@ -32,13 +32,13 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 5</file>
+                    <file> 3</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 4 3</file>
+                    <file> 5 0</file>
                 </tool>
             </inputs>
         </file>
@@ -47,7 +47,7 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 5 1</file>
+                    <file> 3 4</file>
                 </tool>
             </outputs>
         </file>

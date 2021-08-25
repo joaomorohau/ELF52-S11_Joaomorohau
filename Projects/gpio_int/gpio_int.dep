@@ -5,28 +5,28 @@
     <configuration>
         <name>Debug</name>
         <outputs>
+            <file>$PROJ_DIR$\src\gpio_int.s</file>
+            <file>$PROJ_DIR$\src\startup_TM4C1294.s</file>
             <file>$PROJ_DIR$\Debug\Obj\gpio_int.o.rsp</file>
             <file>$PROJ_DIR$\Debug\Exe\gpio_int.out</file>
-            <file>$PROJ_DIR$\src\startup_TM4C1294.s</file>
             <file>$PROJ_DIR$\Debug\Obj\startup_TM4C1294.o.rsp</file>
-            <file>$PROJ_DIR$\Debug\Obj\gpio_int.o</file>
             <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C1294NC.icf</file>
-            <file>$PROJ_DIR$\src\gpio_int.s</file>
-            <file>$PROJ_DIR$\Debug\List\gpio_int.map</file>
             <file>$PROJ_DIR$\Debug\Obj\startup_TM4C1294.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\gpio_int.o</file>
+            <file>$PROJ_DIR$\Debug\List\gpio_int.map</file>
         </outputs>
         <file>
-            <name>$PROJ_DIR$\Debug\Exe\gpio_int.out</name>
+            <name>$PROJ_DIR$\src\gpio_int.s</name>
             <outputs>
                 <tool>
-                    <name>ILINK</name>
+                    <name>AARM</name>
                     <file> 7</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>ILINK</name>
-                    <file> 5 4 8</file>
+                    <name>AARM</name>
+                    <file> 2</file>
                 </tool>
             </inputs>
         </file>
@@ -35,28 +35,28 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
+                    <file> 6</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 4</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\gpio_int.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
                     <file> 8</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>AARM</name>
-                    <file> 3</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\src\gpio_int.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 4</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 0</file>
+                    <name>ILINK</name>
+                    <file> 5 7 6</file>
                 </tool>
             </inputs>
         </file>
@@ -65,7 +65,7 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 7 1</file>
+                    <file> 8 3</file>
                 </tool>
             </outputs>
         </file>

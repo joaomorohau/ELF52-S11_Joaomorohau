@@ -6,9 +6,9 @@
         <name>Debug</name>
         <outputs>
             <file>$PROJ_DIR$\Debug\Obj\asm.o.rsp</file>
+            <file>$PROJ_DIR$\asm.s</file>
             <file>$PROJ_DIR$\Debug\Obj\asm.o</file>
             <file>$TOOLKIT_DIR$\config\generic_cortex.icf</file>
-            <file>$PROJ_DIR$\asm.s</file>
             <file>$PROJ_DIR$\Debug\Exe\Exerc_16.out</file>
             <file>$PROJ_DIR$\Debug\List\Exerc_16.map</file>
         </outputs>
@@ -17,7 +17,7 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 1</file>
+                    <file> 2</file>
                 </tool>
             </outputs>
             <inputs>
@@ -26,6 +26,15 @@
                     <file> 0</file>
                 </tool>
             </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 5 4</file>
+                </tool>
+            </outputs>
         </file>
         <file>
             <name>$PROJ_DIR$\Debug\Exe\Exerc_16.out</name>
@@ -38,18 +47,9 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 2 1</file>
+                    <file> 3 2</file>
                 </tool>
             </inputs>
-        </file>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 5 4</file>
-                </tool>
-            </outputs>
         </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
