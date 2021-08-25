@@ -1,0 +1,102 @@
+###############################################################################
+#
+# IAR ELF Linker V9.10.2.313/W64 for ARM                  24/Aug/2021  20:57:45
+# Copyright 2007-2021 IAR Systems AB.
+#
+#    Output file  =  D:\jmoro\Desktop\calculadora\Debug\Exe\calculadora.out
+#    Map file     =  D:\jmoro\Desktop\calculadora\Debug\List\calculadora.map
+#    Command line =
+#        -f D:\jmoro\Desktop\calculadora\Debug\Exe\calculadora.out.rsp
+#        (D:\jmoro\Desktop\calculadora\Debug\Obj\asm.o --no_out_extension -o
+#        D:\jmoro\Desktop\calculadora\Debug\Exe\calculadora.out --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        D:\jmoro\Desktop\calculadora\Debug\List\calculadora.map --config
+#        "D:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\config\linker\TexasInstruments\TM4C1294NC.icf" --semihosting
+#        --no_library_search --entry __iar_program_start --vfe --text_out
+#        locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0xf'ffff] { ro };
+define block CSTACK with size = 32K, alignment = 8 { };
+define block HEAP with size = 64K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2003'ffff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind         Address    Size  Object
+  -------   ----         -------    ----  ------
+"A0":                               0x40
+  .intvec   ro code          0x0    0x40  asm.o [1]
+                          - 0x40    0x40
+
+"P1":                              0x2ac
+  .text     ro code         0x40   0x2a8  asm.o [1]
+  .rodata   const          0x2e8     0x2  asm.o [1]
+  .text     ro code        0x2ea     0x2  asm.o [1]
+                         - 0x2ec   0x2ac
+
+"P2":                             0x8000
+  CSTACK             0x2000'0000  0x8000  <Block>
+    CSTACK  uninit   0x2000'0000  0x8000  <Block tail>
+                   - 0x2000'8000  0x8000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x2ec     0xf'ffff  0xf'fd14
+  0x2000'8000  0x2003'ffff  0x3'8000
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module          ro code  ro data  rw data
+    ------          -------  -------  -------
+command line/config:
+    -----------------------------------------
+    Total:
+
+D:\jmoro\Desktop\calculadora\Debug\Obj: [1]
+    asm.o               746        2
+    -----------------------------------------
+    Total:              746        2
+
+    Linker created                     32'768
+---------------------------------------------
+    Grand Total:        746        2   32'768
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address  Size  Type      Object
+-----                    -------  ----  ----      ------
+CSTACK$$Base         0x2000'0000         --   Gb  - Linker created -
+CSTACK$$Limit        0x2000'8000         --   Gb  - Linker created -
+__iar_program_start         0x41        Code  Gb  asm.o [1]
+__vector_table               0x0        Data  Gb  asm.o [1]
+
+
+[1] = D:\jmoro\Desktop\calculadora\Debug\Obj
+
+     746 bytes of readonly  code memory
+       2 bytes of readonly  data memory
+  32'768 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
